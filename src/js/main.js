@@ -1,7 +1,5 @@
-import 'focus-visible';
-import lazyImages from './modules/lazyImages';
-import documentReady from './helpers/documentReady';
+import './modules/core';
 
-documentReady(() => {
-  lazyImages();
-});
+$('.class1').toggle();
+$('.class3').hide().show().toggle();
+$('.class4').hide().show();
