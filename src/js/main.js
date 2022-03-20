@@ -1,3 +1,9 @@
 import './lib/lib';
 
-$('.class1').removeClass('class1').addClass('class1', 'add').toggleClass('add').toggleClass('add');
+
+$('div').click(sayMyName);
+$('.class1').off('click', sayMyName);
+
+function sayMyName() {
+  console.log(`My name is ${this.className}`);
+};
