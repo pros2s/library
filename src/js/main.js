@@ -1,5 +1,5 @@
-import './modules/core';
+import './lib/lib';
 
-$('.class1').toggle();
-$('.class3').hide().show().toggle();
+$('.class1').show();
+$('.class3').hide().show().toggleDisplay();
 $('.class4').hide().show();
