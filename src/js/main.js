@@ -1,13 +1,7 @@
 import './lib/lib';
 
-$('div').addAttribute('data-add');
-$('.class2').removeAttribute('data-add');
-$('.class3').addAttribute(/*no parameters*/).hide();
-$('.class4').toggleAttribute('data-add').addAttribute('data-add', 'add-info');
+console.log($('.class2').html('<div><p>another element p in div</p></div>').html());
 
-$('.link').addAttribute('target', '_blank').removeAttribute('target').addAttribute('target', '_blank');
-
-$('button').on('click', function() {
-  console.log($(this));
-  $(this).toggleClass('active');
-});
+$('button').click(() => {
+  $('div').nodeNumber(2).toggleClass('active');
+})
