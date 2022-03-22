@@ -73,3 +73,29 @@ $.prototype.closest = function(selector) {
 
   return this;
 };
+
+$.prototype.siblings = function() {
+  let counterChildren = 0;
+  let counterSiblings = 0;
+
+  const copyThis = Object.assign({}, this);
+
+  for (let i = 0; i < copyThis.length; i++) {
+    const thisParentChildren = copyThis[i].parentNode.children;
+
+    for (let j = 0; j < thisParentChildren.length; j++) {
+      if (copyThis[i] === thisParentChildren[j]) continue;
+
+      this[counterChildren] = thisParentChildren[j];
+      counterChildren++;
+    }
+
+    counterSiblings += thisParentChildren.length - 1;
+  }
+
+  this.length = counterSiblings;
+
+  const objLength = Object.keys(this).length;
+  for (; counterSiblings < objLength; counterSiblings++) delete this[counterSiblings];
+  return this;
+};
