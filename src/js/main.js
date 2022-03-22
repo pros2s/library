@@ -1,7 +1,5 @@
 import './lib/lib';
 
-console.log($('.class2').html('<div><p>another element p in div</p></div>').html());
-
-$('button').click(() => {
-  $('div').nodeNumber(2).toggleClass('active');
-})
+console.log($('.find').findAll('.find__item').addClass('found'));
+console.log($('.find').findAll('.find__not').addClass('found-either'));
+console.log($('.find').findAll('#find'));//#find doesn't exist

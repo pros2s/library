@@ -21,3 +21,38 @@ $.prototype.nodeNumber = function(number) {
 
   return this;
 }
+
+$.prototype.nodeIndex = function() {
+  const parent = this[0].parentNode;
+  const allChildren = [...parent.children];
+
+  const findThis = (item) => item === this[0];
+
+  return allChildren.findIndex(findThis);
+}
+
+$.prototype.findAll = function(selector) {
+  let elementsCounter = 0;
+  let counter = 0;
+
+  const copyThis = Object.assign({}, this);
+
+  for (let i = 0; i < copyThis.length; i++) {
+    const arrayOfElements = copyThis[i].querySelectorAll(selector);
+    if (arrayOfElements.length === 0) continue;
+
+    for (let j = 0; j < arrayOfElements.length; j++) {
+      this[counter] = arrayOfElements[j];
+      counter++;
+    }
+
+    elementsCounter += arrayOfElements.length;
+  }
+
+  this.length = elementsCounter;
+
+  const objLength = Object.keys(this).length;
+  for (; elementsCounter < objLength; elementsCounter++) delete this[elementsCounter];
+  
+  return this;
+}
