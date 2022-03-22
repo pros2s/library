@@ -8,7 +8,7 @@ $.prototype.html = function(content) {
   }
 
   return this;
-}
+};
 
 $.prototype.nodeNumber = function(number) {
   if (!this[number - 1]) throw new TypeError(`Element ${number} does not exist`);
@@ -20,7 +20,7 @@ $.prototype.nodeNumber = function(number) {
   this.length = 1;
 
   return this;
-}
+};
 
 $.prototype.nodeIndex = function() {
   const parent = this[0].parentNode;
@@ -29,7 +29,7 @@ $.prototype.nodeIndex = function() {
   const findThis = (item) => item === this[0];
 
   return allChildren.findIndex(findThis);
-}
+};
 
 $.prototype.findAll = function(selector) {
   let elementsCounter = 0;
@@ -53,6 +53,23 @@ $.prototype.findAll = function(selector) {
 
   const objLength = Object.keys(this).length;
   for (; elementsCounter < objLength; elementsCounter++) delete this[elementsCounter];
-  
+
   return this;
-}
+};
+
+$.prototype.closest = function(selector) {
+  let counter = 0;
+
+  for (let i = 0; i < this.length; i++) {
+    const currentThis = this[i];
+    this[i] = this[i].closest(selector);
+
+    if (!this[i]) this[i] = currentThis;
+    counter++;
+  }
+
+  const objLength = Object.keys(this).length;
+  for (; counter < objLength; counter++) delete this[counter];
+
+  return this;
+};

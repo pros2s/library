@@ -1,5 +1,3 @@
 import './lib/lib';
 
-console.log($('.find').findAll('.find__item').addClass('found'));
-console.log($('.find').findAll('.find__not').addClass('found-either'));
-console.log($('.find').findAll('#find'));//#find doesn't exist
+console.log($('.find__item').nodeNumber(1).closest('.find__item'));
