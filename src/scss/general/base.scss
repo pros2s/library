@@ -1,7 +1,5 @@
 @import 'normalize.css/normalize';
 
-@include focus-visible;
-
 *,
 *::before,
 *::after {
@@ -19,9 +17,17 @@ body {
   flex-direction: column;
   box-sizing: border-box;
 
+  background-color: #3F3F3F;
+
   min-height: 100%;
 
-  font-family: $font-family-primary;
+  color: #C0C0C0;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0px 15px;
+  margin: 0px auto;
 }
 
 img {
@@ -29,11 +35,4 @@ img {
   height: auto;
 
   vertical-align: middle;
-}
-
-@each $heading, $font-size in $font-size-headings {
-  #{$heading} {
-    font-size: $font-size;
-    font-family: $font-family-secondary;
-  }
 }
