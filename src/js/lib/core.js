@@ -7,11 +7,11 @@ documentReady(() => {
 });
 
 
-const $ = function (selector) {
+const $ = function(selector) {
   return new $.prototype.Init(selector);
 };
 
-$.prototype.Init = function (selector) {
+$.prototype.Init = function(selector) {
   if (!selector) return this;// {}
 
   if (selector.tagName) {

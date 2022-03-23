@@ -24,8 +24,8 @@ $.prototype.off = function(eventName, callback) {
 $.prototype.click = function(handler) {
   for (let i = 0; i < this.length; i++) {
     handler ?
-    this[i].addEventListener('click', handler) :
-    this[i].click();
+      this[i].addEventListener('click', handler) :
+      this[i].click();
   }
 
   return this;

@@ -9,7 +9,7 @@ $.prototype.addAttribute = function(attributeName, attributeValue = '') {
   }
 
   return this;
-}
+};
 
 $.prototype.removeAttribute = function(attributeName) {
   if (!attributeName) return this;
@@ -19,7 +19,7 @@ $.prototype.removeAttribute = function(attributeName) {
   }
 
   return this;
-}
+};
 
 $.prototype.toggleAttribute = function(attributeName) {
   if (!attributeName) return this;
@@ -29,4 +29,4 @@ $.prototype.toggleAttribute = function(attributeName) {
   }
 
   return this;
-}
+};

@@ -1,7 +1,7 @@
 import $ from '../core';
 
 
-$.prototype.show = function () {
+$.prototype.show = function() {
   for (let i = 0; i < this.length; i++) {
     if (!this[i].style) continue;
 
@@ -11,7 +11,7 @@ $.prototype.show = function () {
   return this;
 };
 
-$.prototype.hide = function () {
+$.prototype.hide = function() {
   for (let i = 0; i < this.length; i++) {
     if (!this[i].style) continue;
 
@@ -21,11 +21,11 @@ $.prototype.hide = function () {
   return this;
 };
 
-$.prototype.toggleDisplay = function () {
+$.prototype.toggleDisplay = function() {
   for (let i = 0; i < this.length; i++) {
     if (!this[i].style) continue;
 
-    (this[i].style.display === 'none') ? (this[i].style.display = '') : (this[i].style.display = 'none');
+    this[i].style.display === 'none' ? this[i].style.display = '' : this[i].style.display = 'none';
   }
 
   return this;
