@@ -1,4 +1,5 @@
 import $ from '../core';
+import {fadeInAnimationInner, fadeOutAnimationInner} from '../../helpers/AnimationInners';
 
 
 $.prototype.animateOverTime = function(duration, callback, fin) {
@@ -27,14 +28,12 @@ $.prototype.animateOverTime = function(duration, callback, fin) {
 
 $.prototype.fadeIn = function(duration, display, fin) {
   for (let i = 0; i < this.length; i++) {
-    this[i].style.display = display || 'block';
-
-    const _fadeIn = (complection) => {
-      this[i].style.opacity = complection;
-    };
-
-    const ani = this.animateOverTime(duration, _fadeIn, fin);
-    requestAnimationFrame(ani);
+    fadeInAnimationInner(this, this[i],
+      {
+        duration,
+        display,
+        fin
+      });
   }
 
   return this;
@@ -42,16 +41,32 @@ $.prototype.fadeIn = function(duration, display, fin) {
 
 $.prototype.fadeOut = function(duration, fin) {
   for (let i = 0; i < this.length; i++) {
-    const _fadeOut = (complection) => {
-      this[i].style.opacity = 1 - complection;
+    fadeOutAnimationInner(this, this[i],
+      {
+        duration,
+        fin
+      });
+  }
 
-      if (complection === 1) this[i].style.display = 'none';
-    };
+  return this;
+};
 
-    const ani = this.animateOverTime(duration, _fadeOut, fin);
-    requestAnimationFrame(ani);
-
-    this[i].classList.remove('opacity', 'display');
+$.prototype.fadeToggle = function(duration, display, fin) {
+  for (let i = 0; i < this.length; i++) {
+    if (window.getComputedStyle(this[i]).display === 'none') {
+      fadeInAnimationInner(this, this[i],
+        {
+          duration,
+          display,
+          fin
+        });
+    } else {
+      fadeOutAnimationInner(this, this[i],
+        {
+          duration,
+          fin
+        });
+    }
   }
 
   return this;
