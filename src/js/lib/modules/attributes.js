@@ -30,3 +30,13 @@ $.prototype.toggleAttribute = function(attributeName) {
 
   return this;
 };
+
+$.prototype.attribute = function(attributeName) {
+  if (!attributeName) return this;
+
+  for (let i = 0; i < this.length; i++) {
+    if (!this[i].getAttribute(attributeName)) return this;
+
+    return this[i].getAttribute(attributeName);
+  }
+};
