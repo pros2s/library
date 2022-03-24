@@ -1,11 +1,12 @@
 .container
-  .d-flex
-    button.btn.btn-success.m20#first hide one
-    button.btn.btn-danger.m20(data-count='second') hide two
-    button.btn.btn-warning.m20#both hide both
-
-.text
-  .text-center.m20#first-text.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet magni eos eius assumenda incidunt optio laudantium soluta dolorum dicta adipisci quae, veritatis culpa corrupti natus sed necessitatibus animi distinctio?Debitis id sint eaque distinctio dolore, atque ipsa iure molestiae aspernatur architecto vero sit repellendus omnis perspiciatis explicabo commodi nemo ratione quas in, et quod asperiores culpa? Tempora, pariatur voluptate.Quibusdam, quisquam? Incidunt nesciunt aspernatur ratione officiis. Possimus totam modi obcaecati, atque assumenda eaque sed! Dolor perspiciatis placeat similique quis deserunt vitae velit, consequatur suscipit, odio aliquid ipsum vero dolorem.Officiis quae corrupti repellendus cum. Atque, dignissimos inventore quasi qui alias debitis expedita delectus sed laborum culpa. Dolorem qui fugit culpa iusto dolores? Officia odit rem praesentium, totam sit esse!
-  .text-center.m20#second-text.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus amet magni eos eius assumenda incidunt optio laudantium soluta dolorum dicta adipisci quae, veritatis culpa corrupti natus sed necessitatibus animi distinctio?Debitis id sint eaque distinctio dolore, atque ipsa iure molestiae aspernatur architecto vero sit repellendus omnis perspiciatis explicabo commodi nemo ratione quas in, et quod asperiores culpa? Tempora, pariatur voluptate.Quibusdam, quisquam? Incidunt nesciunt aspernatur ratione officiis. Possimus totam modi obcaecati, atque assumenda eaque sed! Dolor perspiciatis placeat similique quis deserunt vitae velit, consequatur suscipit, odio aliquid ipsum vero dolorem.Officiis quae corrupti repellendus cum. Atque, dignissimos inventore quasi qui alias debitis expedita delectus sed laborum culpa. Dolorem qui fugit culpa iusto dolores? Officia odit rem praesentium, totam sit esse!
+  .dropdown
+    button.btn.btn-dark.mt-20.toggle-dropdown-menu#dropdown dropdown
+    ul.dropdown__menu.p10.w-100(data-toggle-id='dropdown')
+      li.dropdown__item.text-center
+        a.dropdown__link(href='#') item #1
+      li.dropdown__item.text-center
+        a.dropdown__link(href='#') item #2
+      li.dropdown__item.text-center
+        a.dropdown__link(href='#') item #3
+      li.dropdown__item.text-center
+        a.dropdown__link(href='#') item #4
