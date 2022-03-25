@@ -1,0 +1,36 @@
+.tabs {
+  border-radius: 10px;
+  background-color: #fff;
+
+  overflow: hidden;
+}
+
+.tabs__trigger {
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 40px;
+
+  color: #000;
+
+  cursor: pointer;
+  transition: background-color .2s linear, color .2s linear;
+
+  &:hover {
+    background-color: #686868;
+    color: #fff;
+  }
+}
+
+.tabs__content {
+  border: 1px rgb(173, 173, 173) solid;
+}
+
+.tabs__text {
+  display: none;
+}
+
+.tabs__text--active {
+  display: block;
+}
