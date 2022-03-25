@@ -31,3 +31,35 @@ $('#modalTrigger').click(() => $('#modalTrigger').createModal(
     }
   }
 ));
+
+
+$('#modalTrigger2').click(() => $('#modalTrigger2').createModal(
+  {
+    inner: {
+      title: 'Second Modal',
+      body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore impedit nobis voluptatem ea veritatis numquam at molestiae ex rem dolor quam perspiciatis quidem assumenda, vero provident quasi quis voluptatum magni. Harum rem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore impedit nobis voluptatem ea veritatis numquam at molestiae ex rem dolor quam perspiciatis quidem assumenda, vero provident quasi quis voluptatum magni. Harum aa'
+    },
+    btns: {
+      count: 2,
+      settings: [
+        {
+          classes: ['btn-danger', 'mr-10'],
+          content: 'close',
+          close: true
+        },
+        {
+          classes: ['btn-dark', 'mr-10'],
+          content: 'dark-mode',
+          callback: () => {
+            $('.btn-dark').on('click', () => {
+              $('.modal-content').addClass('modal-dark');
+              $('.modal-header').addClass('color-white');
+              $('.modal-body').addClass('color-white');
+              $('.modal-content .close').addClass('color-white');
+            });
+          }
+        }
+      ]
+    }
+  }
+));

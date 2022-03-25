@@ -49,6 +49,12 @@
     font-weight: 500;
     font-size: 20px;
 }
+
 .modal-footer {
     padding: 15px;
+}
+
+.modal-dark {
+  transition: background-color .2s linear;
+  background-color: #202124;
 }
