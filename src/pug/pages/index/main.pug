@@ -1,4 +1,4 @@
-.container
+.container.d-flex(style='flex-direction: column')
   .dropdown
     button.btn.btn-dark.mt-20.toggle-dropdown-menu#dropdown dropdown
     ul.dropdown__menu.p10.w-100(data-toggle-id='dropdown')
@@ -10,3 +10,44 @@
         a.dropdown__link(href='#') item #3
       li.dropdown__item.text-center
         a.dropdown__link(href='#') item #4
+
+  .goods.d-flex
+    .card
+      img.card-img(src='https://www.apple.com/newsroom/images/product/iphone/lifestyle/Apple_Shot-on-iPhone-Challenge-2020_Austin-Mann_01072020_big.jpg.large.jpg', alt='photo')
+      .card-body
+        h2.card-title Card title
+        p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia itaque placeat qui suscipit.
+        a.btn.btn-primary(href='#', data-toggle='modal', data-target='#exampleModal') Link to
+
+    .card
+      img.card-img(src='https://www.apple.com/newsroom/images/product/iphone/lifestyle/Apple_Shot-on-iPhone-Challenge-2020_Austin-Mann_01072020_big.jpg.large.jpg', alt='photo')
+      .card-body
+        h2.card-title Card title #2
+        p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia itaque placeat qui suscipit.
+        a.btn.btn-primary(href='#', data-toggle='modal', data-target='#exampleModal2') Link to
+
+  .modal#exampleModal
+    .modal-dialog
+      .modal-content
+        button.close(data-close)
+          span &times;
+        .modal-header
+          .modal-title Modal title
+        .modal-body.p20.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore impedit nobis voluptatem ea veritatis numquam at molestiae ex rem dolor quam perspiciatis quidem assumenda, vero provident quasi quis voluptatum magni. Harum alias minus odio, explicabo, nostrum sequi tempora minima doloribus animi tempore autem temporibus libero. Recusandae cumque inventore assumenda!
+        .modal-footer
+          button.btn.btn-danger(data-close) close
+          button.btn.btn-succes save changes
+
+  .modal#exampleModal2
+    .modal-dialog
+      .modal-content
+        button.close(data-close)
+          span &times;
+        .modal-header
+          .modal-title Modal title 2
+        .modal-body.p20.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore impedit nobis voluptatem ea veritatis numquam at molestiaesandae cumque inventore assumenda!
+        .modal-footer
+          button.btn.btn-danger(data-close) close
+          button.btn.btn-succes save changes

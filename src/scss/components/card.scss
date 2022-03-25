@@ -1,0 +1,33 @@
+.card {
+  width: 350px;
+  margin: 0 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px rgba(0,0,0, .1);
+  overflow: hidden;
+  color: black;
+  a {
+    text-decoration: none;
+  }
+  img {
+    transform: scale(110%);
+    overflow: hidden;
+  }
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}

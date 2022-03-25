@@ -5,6 +5,7 @@ import './modules/handlers';
 import './modules/attributes';
 import './modules/actions';
 import './modules/animations';
+import './components/modals';
 import './components/dropdownMenu';
 
 export default $;
