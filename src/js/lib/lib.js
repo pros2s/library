@@ -7,5 +7,6 @@ import './modules/actions';
 import './modules/animations';
 import './components/modals';
 import './components/dropdownMenu';
+import './components/tabs';
 
 export default $;

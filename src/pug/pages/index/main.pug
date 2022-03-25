@@ -27,15 +27,21 @@
         a.btn.btn-primary#modalTrigger2(href='#', data-target='#exampleModal2') Link to
 
   .tabs.mt-20
-    .tabs__triggers.d-flex.f-space-around
+    .tabs__triggers.d-flex.f-space-around(data-tabpanel)
       .tabs__trigger.d-flex tab #1
       .tabs__trigger.d-flex tab #2
       .tabs__trigger.d-flex tab #3
 
-    .tabs__content.p20
-      p.tabs__text.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis veniam tempora debitis temporibus rem voluptatum error dolore alias dolor officiis ipsum quae dignissimos fugit officia libero quia molestias vitae, voluptatem atque placeat nulla quidem sequi veritatis nobis. Dignissimos accusantium veritatis odit eius dolore a ut nesciunt facere officia vitae quibusdam autem tenetur distinctio soluta minus, quisquam, at inventore temporibus dolorum iusto asperiores quae odio? Voluptatibus aut necessitatibus eligendi! Ratione distinctio tempore quisquam repellendus repellat unde deleniti neque nesciunt, asperiores temporibus ducimus illo provident quam hic qui consequuntur maxime cupiditate nisi saepe natus. Velit error tempora, adipisci facere labore recusandae nulla?
-      p.tabs__text.
-        Lorem, ipsum dolor sit amet c officiis ipsum quae dignissimos fugit officia libero quia molestias vitae, voluptatem atque c qui consequuntur maxime cupiditate nisi saepe natus. Velit error tempora, adipisci facere labore recusandae nulla?
-      p.tabs__text.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis veniam tempora debitis temporibus rem voluptatum error dolore alias dolor officiis ipsum quae dignissimos fugit officia libero quia molestias vitae, voluptatem atque placeatm hic qui consequuntur maxime cupiditate nisi saepe natus. Velit error tempora, adipisci facere labore recusandae nulla?
+    .tabs__content
+      .tabs__inner.p20
+        h3.tabs__title.mb-10 Title #1
+        p.tabs__text.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis veniam tempora debitis temporibus rem voluptatum error dolore alias dolor officiis ipsum quae dignissimos fugit officia libero quia molestias vitae, voluptatem atque placeat nulla quidem sequi veritatis nobis. Dignissimos accusantium veritatis odit eius dolore a ut nesciunt facere officia vitae quibusdam autem tenetur distinctio soluta minus, quisquam, at inventore temporibus dolorum iusto asperiores quae odio? Voluptatibus aut necessitatibus eligendi! Ratione distinctio tempore quisquam repellendus repellat unde deleniti neque nesciunt, asperiores temporibus ducimus illo provident quam hic qui consequuntur maxime cupiditate nisi saepe natus. Velit error tempora, adipisci facere labore recusandae nulla?
+      .tabs__inner.p20
+        h3.tabs__title.mb-10 Title #2
+        p.tabs__text.
+          Lorem, ipsum dolor sit amet c officiis ipsum quae dignissimos fugit officia libero quia molestias vitae, voluptatem atque c qui consequuntur maxime cupiditate nisi saepe natus. Velit error tempora, adipisci facere labore recusandae nulla?
+      .tabs__inner.p20
+        h3.tabs__title.mb-10 Title #3
+        p.tabs__text.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis veniam tempora debitis temporibus rem voluptatum error dolore alias dolor officiis ipsum quae dignissimos fugit officia libero quia molestias vitae, voluptatem atque placeatm hic qui consequuntur maxime cupiditate nisi saepe natus. Velit error tempora, adipisci facere labore recusandae nulla?

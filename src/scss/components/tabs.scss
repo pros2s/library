@@ -23,14 +23,19 @@
   }
 }
 
-.tabs__content {
-  border: 1px rgb(173, 173, 173) solid;
-}
-
-.tabs__text {
+.tabs__inner {
   display: none;
+  width: 740px;
+
+  border: 1px rgb(173, 173, 173) solid;
+  color: #000;
 }
 
-.tabs__text--active {
-  display: block;
+.tabs__trigger--active {
+  background-color: #202124;
+  color: #fff;
+}
+
+.tabs__text--notactive {
+  display: none;
 }
