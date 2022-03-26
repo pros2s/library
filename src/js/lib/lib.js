@@ -8,5 +8,6 @@ import './modules/animations';
 import './components/modals';
 import './components/dropdownMenu';
 import './components/tabs';
+import './components/accordion';
 
 export default $;

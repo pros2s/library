@@ -63,3 +63,5 @@ $('#modalTrigger2').click(() => $('#modalTrigger2').createModal(
     }
   }
 ));
+
+$('.accordion__trigger').accordion('accordion__trigger--active', 'accordion__content--active');
