@@ -1,9 +1,9 @@
 import $ from '../core';
+import scrollWidth from '../../helpers/scrollWidth';
 
-const ANIMATIONTIME = 300;
+const ANIMATIONTIME = 500;
 
 $.prototype.modal = function(created) {
-
   for (let i = 0; i < this.length; i++) {
     const target = $(this[i]).attribute('data-target');
 
@@ -16,24 +16,32 @@ $.prototype.modal = function(created) {
     document.querySelectorAll(`${target} [data-close]`).forEach((btn) => {
       $(btn).click(() => {
         $(target).fadeOut(ANIMATIONTIME);
-        document.body.style.overflow = '';
+
+        setTimeout(() => {
+          if (created) {
+            document.body.style = '';
+            document.querySelector(target).remove();
+          }
+        }, ANIMATIONTIME);
       });
     });
 
     $(target).click((e) => {
       if (e.target.classList.contains('modal')) {
         $(target).fadeOut(ANIMATIONTIME);
-        document.body.style.overflow = '';
 
         setTimeout(() => {
-          if (created) document.querySelector(target).remove();
+          if (created) {
+            document.body.style = '';
+            document.querySelector(target).remove();
+          }
         }, ANIMATIONTIME);
       }
     });
   }
 };
 
-$('[data-toggle="modal"]').modal();
+$('[data-toggle="modal"]').modal(true);
 
 
 $.prototype.createModal = function({inner, btns} = {}) {
@@ -47,7 +55,9 @@ $.prototype.createModal = function({inner, btns} = {}) {
     $(modalElement).html(`
     <div class="modal-dialog">
       <div class="modal-content">
-        <button class="close" data-close><span>&times;</span></button>
+        <button class="close" data-close>
+          <span>&times;</span>
+        </button>
         <div class="modal-header">
           <h3 class="modal-title">${inner.title}</h3>
         </div>
@@ -68,7 +78,7 @@ $.prototype.createModal = function({inner, btns} = {}) {
         $(button).click(settings[j].callback);
       }
 
-      if (settings[j].close) $(button).addAttribute('data-close');
+      if (settings[j].close) $(button).addAttribute('data-close', 'true');
 
       buttons.push(button);
     }
@@ -77,5 +87,7 @@ $.prototype.createModal = function({inner, btns} = {}) {
     document.body.appendChild(modalElement);
     $(this[i]).modal(true);
     $(this[i].getAttribute('data-target')).fadeIn(ANIMATIONTIME);
+    document.body.style.overflow = 'hidden';
+    if (document.body.offsetHeight > window.innerHeight) document.body.style.marginRight = `${scrollWidth()}px`;
   }
 };
