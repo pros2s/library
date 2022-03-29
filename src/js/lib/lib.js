@@ -9,5 +9,6 @@ import './components/modals';
 import './components/dropdownMenu';
 import './components/tabs';
 import './components/accordion';
+import './components/carousel';
 
 export default $;

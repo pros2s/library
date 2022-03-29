@@ -1,7 +1,7 @@
 .carousel {
   display: block;
   margin: 20px auto 0;
-  width: 900px;
+  width: 100%;
   position: relative;
 }
 
@@ -48,6 +48,8 @@
 .carousel-slides {
   height: 100%;
   display: flex;
+
+  transition: transform .4s linear;
 }
 
 .carousel-item {
