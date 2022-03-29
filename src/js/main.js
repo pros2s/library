@@ -1,5 +1,6 @@
 import './lib/lib';
 
+
 $('#modalTrigger').click(() => $('#modalTrigger').createModal(
   {
     inner: {
@@ -65,3 +66,6 @@ $('#modalTrigger2').click(() => $('#modalTrigger2').createModal(
 ));
 
 $('.accordion__trigger').accordion('accordion__trigger--active', 'accordion__content--active');
+
+$().get('https://reqres.in/api/products/3')
+  .then(res => console.log(res));
