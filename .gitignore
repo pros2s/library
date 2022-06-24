@@ -1,12 +1,3 @@
-.husky
-gulp
-.babelrc
-.pug-lintrc.json
-.stylelintignore
-.stylelintrc.json
-gulpfile.babel.js
-smart-grid-config.js
-
 __MACOSX
 .Saved
 _arc
