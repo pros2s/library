@@ -5,8 +5,6 @@ gulp
 .stylelintignore
 .stylelintrc.json
 gulpfile.babel.js
-package-lock.json
-package.json
 smart-grid-config.js
 
 __MACOSX
